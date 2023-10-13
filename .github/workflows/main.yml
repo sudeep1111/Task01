@@ -43,8 +43,7 @@ jobs:
         run: npm ci
 
       - name: Analyze code with SonarCloud
-        run: |
-          npm run sonar-scanner
+        run: npm run sonar-scanner
 
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
