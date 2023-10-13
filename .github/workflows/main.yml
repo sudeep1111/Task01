@@ -43,10 +43,18 @@ jobs:
         run: |
           sudo apt-get update -y
           sudo apt-get install -y openjdk-11-jre
-          export PATH=$PATH:/path/to/sonar-scanner-cli/bin
+          wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.7.0.2342-linux.zip
+          unzip sonar-scanner-cli-4.7.0.2342-linux.zip
+          export PATH=$PATH:./sonar-scanner-4.7.0.2342-linux/bin
 
       - name: Run Sonar Scanner
         run: sonar-scanner
+
+      - name: Debugging
+        run: |
+         pwd
+         echo $PATH
+
 
 # Add the SonarCloud configuration file sonar-project.properties in your repository.
 # Make sure it's properly configured with your project key, organization key, SonarCloud token, etc.
