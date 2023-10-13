@@ -14,4 +14,11 @@
     "start": "node index.js",
     "test": "./node_modules/.bin/mocha ./test/test.js"
   }
+
+  "scripts": {
+  "start": "node index.js",
+  "test": "./node_modules/.bin/mocha ./test/test.js",
+  "sonar-scanner": "sonar-scanner"
+}
+
 }
