@@ -40,7 +40,7 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Analyze code with SonarCloud
         run: npm run sonar-scanner
